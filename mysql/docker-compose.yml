@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mysql-master:
+    container_name: mysql-master
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: masterpassword
+      MYSQL_DATABASE: replicatedb
+      MYSQL_REPLICATION_MODE: master
+      MYSQL_REPLICATION_USER: repluser
+      MYSQL_REPLICATION_PASSWORD: replpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+    command: --server-id=1 --log-bin=/var/lib/mysql/mysql-bin.log --gtid-mode=ON --enforce-gtid-consistency=ON
+
+volumes:
+  data:
