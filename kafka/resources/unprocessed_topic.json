@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "tag_info",
+  "namespace": "com.nekara.sample",
+  "fields": [
+    {"name": "id", "type": "int"},
+    {"name": "tag1", "type": "string"},
+    {"name": "tag2", "type": "string"},
+    {"name": "tag3", "type": "string"},
+    {"name": "tag4", "type": "string"},
+    {"name": "tag5", "type": "string"},
+    {"name": "tag6", "type": "string"},
+    {"name": "tag7", "type": "string"},
+    {"name": "tag8", "type": "string"},
+    {"name": "tag9", "type": "string"},
+    {"name": "tag10", "type": "string"}
+  ]
+}
+
